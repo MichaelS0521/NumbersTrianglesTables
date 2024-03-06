@@ -51,15 +51,7 @@ public class NumberUtilities {
     }
 
     public static String getRange(int start, int stop) {
-//        String result = "";
-//        for (int i = start; i < stop; i++) {
-//            if(i == stop){
-//                break;
-//            }
-//
-//            result = result + i;
-//        }
-//        return result;
+
         return getRange(start, stop , 1);
     }
 
@@ -69,15 +61,6 @@ public class NumberUtilities {
         for (int i = start; i < stop; i += step){
             sb.append(i);
         }
-//        String result = "";
-//        for (step = start; step < stop; step++) {
-//            if(step == stop){
-//                break;
-//            }
-//
-//            result = result + step;
-//        }
-//        return result;
         return sb.toString();
     }
 
@@ -85,7 +68,7 @@ public class NumberUtilities {
     public static String getExponentiations(int start, int stop, int step, int exponent) {
         StringBuilder sb = new StringBuilder();
         for (int i = start; i < stop; i += step) {
-            sb.append((int) Math.pow(i, exponent));
+            sb.append((int) Math.pow(i, exponent));     //Math.pow(double n, double m)
         }
         return sb.toString();
     }
